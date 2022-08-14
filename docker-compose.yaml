@@ -1,13 +1,13 @@
 version: '3.7'
 services:
-  api-server:
+  api:
     build: .
     tty: true
     restart: always
     ports:
       - '38000:3000'
     volumes:
-      - ./app:/api-server
+      - ./api:/api
   db:
    image: mysql/mysql-server:8.0.30
    environment:
